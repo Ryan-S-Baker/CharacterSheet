@@ -26,3 +26,17 @@ strScore.addEventListener("input", function(){
     var strOutput = document.querySelector("#strMod");
     strOutput.innerHTML=strMod;})
 
+conScore.addEventListener("input", function(){
+    var conMod = Math.floor((conScore.value-10)/2);
+    var conOutput = document.querySelector("#conMod");
+    conOutput.innerHTML=conMod;})
+
+wisScore.addEventListener("input", function(){
+    var wisMod = Math.floor((wisScore.value-10)/2);
+    var wisOutput = document.querySelector("#wisMod");
+    wisOutput.innerHTML=wisMod;})
+    
+intScore.addEventListener("input", function(){
+    var intMod = Math.floor((intScore.value-10)/2);
+    var intOutput = document.querySelector("#intMod");
+    intOutput.innerHTML=intMod;})
