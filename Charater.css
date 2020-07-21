@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    text-align: center;
+
 }
 html, body {
     margin: 0;
@@ -40,16 +40,33 @@ header {
 .ch-info div{
     display: inline-block
 }
-.attributes div{
-    text-align: center;
+
+.left-column {
+    float: left;
+    background-color: rgb(74, 80, 74);
+    display: column;
+    flex-direction: column;
+    left: 10px;
+
+    width:50%;
     padding: 0 5%;
     padding-top: 1em;
-    display: inline-block;
 }
-.attributes, cha-score{
-    padding-bottom: 10px;
+.right-column {
+    float:right;
+    background-color: darkgreen;
+    display: column;
+    flex-direction: column;
+    right:0px;
+    width:50%;
+    padding: 0 5%;
+    padding-top: 1em;
 }
-button {
-    margin: 0 auto;
-    
+
+
+.generate {
+    padding-top: 3px;
+    text-align: center;
+    background-color: darkred;
+
 }
