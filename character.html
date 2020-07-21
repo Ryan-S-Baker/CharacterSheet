@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
-
+    <script src="character.js"></script>
+    <link rel="stylesheet" href="Charater.css">
     <head>
         <title>Character Generator</title>
-        <link rel="stylesheet" href="Charater.css">
-        <!--<link rel="javascript" href="character.js">-->
+        
+        
     </head>
     <header class="main-header">
         <h1>Baker's Character Creator</h1>
         <nav>
+            <div class="hamburger">
+                <div class="line line-1"></div>
+                <div class="line line-2"></div>
+                <div class="line line-2"></div>
+            </div>
             <ul class="main-nav">
                 <li><a>Fifth Edition</a></li>
                 <li><a>Third Edition</a></li>
@@ -19,6 +25,7 @@
     </header>
 <!--Just for organization sake-->
     <body>
+        
         <div class="ch-info">
             <div class="ch-name">
             <strong>Character name:</strong>
@@ -38,44 +45,45 @@
         <section class="attributes">
             <div class="str-score">
                 <strong>Strength</strong>
-                |<span>Score</span>|
+                |<span>Score</span>=
                     <input type="number">
-                |<span>Modifier</span>|
+                |<span>Modifier</span>=
             </div>
             <div class="dex-score">
                 <strong>Dexterity</strong>
-                |<span>Score</span>|
+                |<span>Score</span>=
                     <input type="number">
-                |<span>Modifier</span>|
+                |<span>Modifier</span>=
             </div>
             <div class="con-score">
                 <strong>Constitution</strong>
-                |<span>Score</span>|
+                |<span>Score</span>=
                     <input type="number">
-                |<span>Modifier</span>|
+                |<span>Modifier</span>=
             </div>
             <div class="wis-score">
                 <strong>Wisdom</strong>
-                |<span>Score</span>|
+                |<span>Score</span>=
                     <input type="number">
-                |<span>Modifier</span>|
+                |<span>Modifier</span>=
             </div>
             <div class="int-score">
                 <strong>Intelligence</strong>
-                |<span>Score</span>|
+                |<span>Score</span>=
                    <input type="number">
-                |<span>Modifier</span>|
+                |<span>Modifier</span>=
             </div>
             <div class="cha-score">
                 <strong>Charisma</strong>
-                |<span>Score</span>|
+                |<span>Score</span>=
                     <input type="number">
-                |<span>Modifier</span>|
+                |<span>Modifier</span>=
                     <output type="number"></output>
             </div>
         </section>
         <div>
             <button role="button">Generate</button>
+            
         </div>
     </body>
    
