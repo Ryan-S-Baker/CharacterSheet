@@ -1,9 +1,42 @@
+* {
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
 html {
-    background-image: href="images/wornparchment.jpg";
+    background-size: width=100%;
+    background-image: url("images/worn-parchment.jpg")
+    
 }
-.main-header {
-    background-color: burlywood;
+header {
+    //background-color: darkred;
+    text-align: center;
+    border-bottom: 1px, dimgray;
 }
-nav {
+
+.main-nav li {
+    background-color: cornsilk;
+    display: inline-block;  
+    padding: 0 10%;
+
+}
+.ch-info div{
+    background-color: darkgoldenrod;
+    
+    display: inline-block
+}
+.attributes div{
+    text-align: center;
+    padding: 0 5%;
+    background-color: darkblue;
+    display: inline-block;
+}
+button {
+    color: darkmagenta;
+    margin: 0 auto;
     
 }
