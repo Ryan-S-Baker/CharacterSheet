@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <script src="character.js"></script>
+    <script defer src="character.js"></script>
     <link rel="stylesheet" href="Charater.css">
     <head>
         <title>Character Generator</title>
@@ -29,17 +29,17 @@
         <div class="ch-info">
             <div class="ch-name">
             <strong>Character name:</strong>
-                <input type="text"><br>
+                <input type="text" id="charName"><br>
             </div>
 
             <div class="ch-race">
             <strong>Character Race:</strong>
-                <input type="text"><br>
+                <input type="text" id="charRace"><br>
             </div>
 
             <div class="ch-class">
                 <strong>Character Class:</strong>
-                <input type="text"><br>
+                <input type="text" id="charClass"><br>
             </div>
         </div>
        
@@ -47,50 +47,58 @@
 
         <section class="attributes">
             <br>
-            <div class="str-score left-column">
+            <div class="left-column">
+                
+                <div class="str-score">
                 <strong>Strength</strong>
                 |<span>Score</span>=
-                    <input type="number">
+                    <input type="number" id="strScore">
                 |<span>Modifier</span>=
-                    <output type="number" id="str-mod"></output>           
+                    <output type="number" id="strMod"></output> 
+                </div>
+
+                <div class="con-score">
+                        <strong>Constitution</strong>
+                        |<span>Score</span>=
+                            <input type="number">
+                        |<span>Modifier</span>=
+                            <output type="number" id="conMod"></output> 
+                </div> 
+
+                <div class="int-score">
+                    <strong>Intelligence</strong>
+                    |<span>Score</span>=
+                       <input type="number">
+                    |<span>Modifier</span>=
+                        <output type="number" id="intMod"></output>
+                </div> 
+                </div>
             </div>
-            
-            <div class="dex-score right-column">
+            <div class="right-column">
+                <div class="dex-score">
                 <strong>Dexterity</strong>
                 |<span>Score</span>=
                     <input type="number">
                 |<span>Modifier</span>=
-                    <output type="number" id="dex-mod"></output>
+                    <output type="number" id="dexMod"></output>
                         
-            </div>
-            
-            <div class="con-score  left-column">
-                <strong>Constitution</strong>
-                |<span>Score</span>=
-                    <input type="number">
-                |<span>Modifier</span>=
-                    <output type="number" id="con-mod"></output> 
-            </div>
-            <div class="wis-score right-column">
+                 </div>
+        
+                <div class="wis-score">
                 <strong>Wisdom</strong>
                 |<span>Score</span>=
                     <input type="number">
                 |<span>Modifier</span>=
-                    <output type="number" id="wis-mod"></output>
-            </div>
-            <div class="int-score left-column">
-                <strong>Intelligence</strong>
-                |<span>Score</span>=
-                   <input type="number">
-                |<span>Modifier</span>=
-                    <output type="number" id="int-mod"></output>
-            </div>
-            <div class="cha-score right-column">
+                    <output type="number" id="wisMod"></output>
+                </div>
+            
+                <div class="cha-score">
                 <strong>Charisma</strong>
                 |<span>Score</span>=
                     <input type="number">
                 |<span>Modifier</span>=
-                    <output type="number" id="dex-mod"></output>
+                    <output type="number" id="chaMod"></output>
+                </div>
             </div>
         </section>
         <br>
