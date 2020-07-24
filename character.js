@@ -1,5 +1,9 @@
 //let var RacialStrBonus = 0;
-//let var RacialStrBonus = 0;
+//let var RacialDexBonus = 0;
+//let var RacialConBonus = 0;
+//let var RacialWisBonus = 0;
+//let var RacialIntBonus = 0;
+//let var RacialChaBonus = 0;
 
 //these score will drive the modifier that will play into the game mechanics
 var dexScore = document.querySelector("#dexScore");
@@ -24,11 +28,38 @@ var charRaceDropdown = document.querySelector("#charRace");
 charRaceDropdown.addEventListener("change", function(event){
   const race = event.target.value;  
     console.log(event.target.value);
+    
     if (race==="dragonborn") {
-       //chaOutput.innerHTML=~~chaOutput.innerHTML+2;
-       chaScore.value=~~chaScore.value+2;
-        chaScore.dispatchEvent(new Event("input"));
+        chaScore.value=~~chaScore.value+1;
+            chaScore.dispatchEvent(new Event("input"));
+        strScore.value=~~strScore.value+2;
+            strScore.dispatchEvent(new Event("input"));
     }
+
+    if (race==="human"){
+        chaScore.value=~~chaScore.value+1;
+            chaScore.dispatchEvent(new Event("input"));
+        strScore.value=~~strScore.value+1;
+            strScore.dispatchEvent(new Event("input"));
+        dexScore.value=~~dexScore.value+1;
+            dexScore.dispatchEvent(new Event("input"));
+        conScore.value=~~conScore.value+1;
+            conScore.dispatchEvent(new Event("input"));
+        intScore.value=~~intScore.value+1;
+            intScore.dispatchEvent(new Event("input"));
+        wisScore.value=~~wisScore.value+1;
+            wisScore.dispatchEvent(new Event("input"));
+    }
+
+    if (race==="dwarf"){
+        conScore.value=~~conScore.value+2;
+            conScore.dispatchEvent(new Event("input"));
+    }
+
+    if (race==="elf"){
+        dexScore.value=~~dexScore.value+2;
+            dexScore.dispatchEvent(new Event("input"));
+       }
 } )
 
 
