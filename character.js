@@ -1,22 +1,31 @@
 
 
-//let var RacialStrBonus = 0;
-//let var RacialDexBonus = 0;
-//let var RacialConBonus = 0;
-//let var RacialWisBonus = 0;
-//let var RacialIntBonus = 0;
-//let var RacialChaBonus = 0;
+var RacialStrBonus = 0;
+var RacialDexBonus = 0;
+var RacialConBonus = 0;
+var RacialWisBonus = 0;
+var RacialIntBonus = 0;
+var RacialChaBonus = 0;
+var FinalDexScore;
 
 const generate=document.getElementById("GenerateButton");
 
+function dexModifier(){
+    //below is final dex score
+    FinalDexScore=parseInt(BasedexScore.value, 10)+RacialDexBonus;
 
-//these score will drive the modifier that will play into the game mechanics
-var dexScore = document.querySelector("#dexScore");
-var strScore = document.querySelector("#strScore");
-var conScore = document.querySelector("#conScore");
-var wisScore = document.querySelector("#wisScore");
-var intScore = document.querySelector("#intScore");
-var chaScore = document.querySelector("#chaScore");
+    //modifier
+    return Math.floor((FinalDexScore-10)/2);
+}
+
+
+// //these score will drive the modifier that will play into the game mechanics
+var BasedexScore = document.querySelector("#BasedexScore");
+var BasestrScore = document.querySelector("#BasestrScore");
+var BaseconScore = document.querySelector("#BaseconScore");
+var BasewisScore = document.querySelector("#BasewisScore");
+var BaseintScore = document.querySelector("#BaseintScore");
+var BasechaScore = document.querySelector("#BasechaScore");
 
 var dexOutput = document.querySelector("#dexMod");
 var strOutput = document.querySelector("#strMod");
@@ -30,83 +39,98 @@ var charName='';
 
 //Character race, will have modifying values added to the below scores
 var charRaceDropdown = document.querySelector("#charRace");
-charRaceDropdown.addEventListener("change", function(event){
+charRaceDropdown.addEventListener("click", function(event){
   const race = event.target.value;  
     console.log(event.target.value);
 
+    if (race==="none"){
+        RacialStrBonus = 0;
+        RacialDexBonus = 0;
+        RacialConBonus = 0;
+        RacialWisBonus = 0;
+        RacialIntBonus = 0;
+        RacialChaBonus = 0;
+    }
+
     if (race==="dragonborn") {
-        chaScore.value=~~chaScore.value+1;
-            chaScore.dispatchEvent(new Event("input"));
-        strScore.value=~~strScore.value+2;
-            strScore.dispatchEvent(new Event("input"));
+        RacialChaBonus=1;
+            //chaScore.dispatchEvent(new Event("input"));
+        RacialStrBonus=2;
+            //strScore.dispatchEvent(new Event("input"));
     }
 
     if (race==="human"){
-        chaScore.value=~~chaScore.value+1;
+        RacialChaBonus=1;
             //chaScore.dispatchEvent(new Event("input"));
-        strScore.value=~~strScore.value+1;
+            RacialStrBonus=1;
             //strScore.dispatchEvent(new Event("input"));
-        dexScore.value=~~dexScore.value+1;
+            RacialDexBonus=1;
             //dexScore.dispatchEvent(new Event("input"));
-        conScore.value=~~conScore.value+1;
+            RacialConBonus=1;
             //conScore.dispatchEvent(new Event("input"));
-        intScore.value=~~intScore.value+1;
+            RacialIntBonus=1;
             //intScore.dispatchEvent(new Event("input"));
-        wisScore.value=~~wisScore.value+1;
+            RacialWisBonus=1;
             //wisScore.dispatchEvent(new Event("input"));
     }
 
     if (race==="dwarf"){
-        conScore.value=~~conScore.value+2;
-            conScore.dispatchEvent(new Event("input"));
+        RacialConBonus=2;
+            //conScore.dispatchEvent(new Event("input"));
     }
 
     if (race==="elf"){
-        dexScore.value=~~dexScore.value+2;
-            dexScore.dispatchEvent(new Event("input"));
+        RacialDexBonus=2;
+            //dexScore.dispatchEvent(new Event("input"));
        }
 } )
 
 
-//Character class, this is for gameplay mechanics
-var charClass='';
+// //Character class, this is for gameplay mechanics
+// var charClass='';
 
 
 
 
-//equals corresponding Score value minus 10 then divided by 2 rounded down
+// //equals corresponding Score value minus 10 then divided by 2 rounded down
 
 generate.addEventListener('click', function(){
-    alert('hello')
+    console.log('hello');
+
+    var DexterityModifier = dexModifier();
+
+    console.log(DexterityModifier);
+    BasedexScore.value=FinalDexScore;
+    dexMod.innerHTML=DexterityModifier;
+
+    
+    // var dexMod = Math.floor(((BasedexScore.value + RacialDexBonus.value)-10)/2);
+    
+    // dexOutput.innerHTML=dexMod;
+    // console.log(dexMod);
 })
 
+// strScore.addEventListener("input", function(){
+//     var strMod = Math.floor((strScore.value-10)/2);
+    
+//     strOutput.innerHTML=strMod;})
 
-dexScore.addEventListener("input", function(){
-    var dexMod = Math.floor((dexScore.value-10)/2);
+// conScore.addEventListener("input", function(){
+//     var conMod = Math.floor((conScore.value-10)/2);
     
-    dexOutput.innerHTML=dexMod;})
+//     conOutput.innerHTML=conMod;})
 
-strScore.addEventListener("input", function(){
-    var strMod = Math.floor((strScore.value-10)/2);
+// wisScore.addEventListener("input", function(){
+//     var wisMod = Math.floor((wisScore.value-10)/2);
     
-    strOutput.innerHTML=strMod;})
+//     wisOutput.innerHTML=wisMod;})
+    
+// intScore.addEventListener("input", function(){
+//     var intMod = Math.floor((intScore.value-10)/2);
+    
+//     intOutput.innerHTML=intMod;})
 
-conScore.addEventListener("input", function(){
-    var conMod = Math.floor((conScore.value-10)/2);
-    
-    conOutput.innerHTML=conMod;})
-
-wisScore.addEventListener("input", function(){
-    var wisMod = Math.floor((wisScore.value-10)/2);
-    
-    wisOutput.innerHTML=wisMod;})
-    
-intScore.addEventListener("input", function(){
-    var intMod = Math.floor((intScore.value-10)/2);
-    
-    intOutput.innerHTML=intMod;})
-
-chaScore.addEventListener("input", function(){
-    var chaMod = Math.floor((chaScore.value-10)/2);
+// chaScore.addEventListener("input", function(){
+//     var chaMod = Math.floor((chaScore.value-10)/2);
         
-    chaOutput.innerHTML=chaMod;})
+//     chaOutput.innerHTML=chaMod;})

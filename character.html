@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
-    <script defer src="character.js"></script>
-    <link rel="stylesheet" href="Charater.css">
+
     <head>
         <title>Character Generator</title>
-        
-        
+        <script defer src="character.js"></script>
+        <link rel="stylesheet" href="Charater.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
+<body>
     <header class="main-header">
         <h1>Baker's Character Creator</h1>
         <nav>
@@ -23,9 +24,7 @@
         </nav>
         <hr>
     </header>
-<!--Just for organization sake-->
-    <body>
-        
+<!--Just for organization sake-->          
         <div class="ch-info">
             <div class="ch-name">
             <strong>Character name:</strong>
@@ -58,7 +57,7 @@
                 <div class="str-score">
                 <strong>Strength</strong>
                 |<span>Score</span>=
-                    <input type="number" id="strScore">
+                    <input type="number" id="BasestrScore">
                 |<span>Modifier</span>=
                     <output type="number" id="strMod" class="modifier"></output> 
                 </div>
@@ -66,7 +65,7 @@
                 <div class="con-score">
                         <strong>Constitution</strong>
                         |<span>Score</span>=
-                            <input type="number" id="conScore">
+                            <input type="number" id="BaseconScore">
                         |<span>Modifier</span>=
                             <output type="number" id="conMod" class="modifier"></output> 
                 </div> 
@@ -74,7 +73,7 @@
                 <div class="int-score">
                     <strong>Intelligence</strong>
                     |<span>Score</span>=
-                       <input type="number" id="intScore">
+                       <input type="number" id="BaseintScore">
                     |<span>Modifier</span>=
                         <output type="number" id="intMod" class="modifier"></output>
                 </div> 
@@ -84,16 +83,16 @@
                 <div class="dex-score">
                 <strong>Dexterity</strong>
                 |<span>Score</span>=
-                    <input type="number" id="dexScore">
+                    <input type="number" id="BasedexScore">
                 |<span>Modifier</span>=
-                    <output type="number" id="dexMod" class="modifier"></output>
+                    <span id="dexMod" class="modifier"></span>
                         
                  </div>
         
                 <div class="wis-score">
                 <strong>Wisdom</strong>
                 |<span>Score</span>=
-                    <input type="number" id="wisScore">
+                    <input type="number" id="BasewisScore">
                 |<span>Modifier</span>=
                     <output type="number" id="wisMod" class="modifier"></output>
                 </div>
@@ -101,14 +100,14 @@
                 <div class="cha-score">
                 <strong>Charisma</strong>
                 |<span>Score</span>=
-                    <input type="number" id="chaScore">
+                    <input type="number" id="BasechaScore">
                 |<span>Modifier</span>=
                     <output type="number" id="chaMod" class="modifier"></output>
                 </div>
             </div>
         </section>
         <br>
-        
+
         <div class="generate">
             
             <button role="button" id="GenerateButton">Generate</button>

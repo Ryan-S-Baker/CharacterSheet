@@ -8,9 +8,7 @@ html, body {
     padding: 0;
 }
 html {
-    background-size: width=100%;
-    background-image: url("images/worn-parchment.jpg")
-    
+    background-image: url("images/worn-parchment.jpg");
 }
 header {
     text-align: center;
@@ -42,23 +40,23 @@ header {
 }
 
 .left-column {
-    float: left;
-    
-    display: column;
-    flex-direction: column;
-    left: 10px;
+    float:left;
     width:50%;
-    padding: 0 5%;
-    padding-top: 1em;
+    padding: 1em 5% 0;
 }
 .right-column {
     float:right;
-    display: column;
-    flex-direction: column;
-    right:0px;
     width:50%;
-    padding: 0 5%;
-    padding-top: 1em;
+    padding: 1em 5% 0;
+}
+
+@media (max-width: 700px){
+    .left-column, .right-column {
+        float:none;
+        width:100%;
+        padding: 0;
+        text-align: center;
+    }
 }
 .left-column div {
     margin-bottom: 10px;
