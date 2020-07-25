@@ -43,7 +43,7 @@ header {
 
 .left-column {
     float: left;
-    background-color: rgb(74, 80, 74);
+    
     display: column;
     flex-direction: column;
     left: 10px;
@@ -53,7 +53,6 @@ header {
 }
 .right-column {
     float:right;
-    background-color: darkgreen;
     display: column;
     flex-direction: column;
     right:0px;
@@ -79,10 +78,15 @@ header {
 .generate {
     padding-top: 3px;
     text-align: center;
-    background-color: darkred;
+    
 
 }
-
-.div output{
+.test {
     background-color: white;
+    display: none;
+}
+.modifier {
+    background-color: white;
+    
+    
 }

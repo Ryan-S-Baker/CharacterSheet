@@ -1,9 +1,14 @@
+
+
 //let var RacialStrBonus = 0;
 //let var RacialDexBonus = 0;
 //let var RacialConBonus = 0;
 //let var RacialWisBonus = 0;
 //let var RacialIntBonus = 0;
 //let var RacialChaBonus = 0;
+
+const generate=document.getElementById("GenerateButton");
+
 
 //these score will drive the modifier that will play into the game mechanics
 var dexScore = document.querySelector("#dexScore");
@@ -28,7 +33,7 @@ var charRaceDropdown = document.querySelector("#charRace");
 charRaceDropdown.addEventListener("change", function(event){
   const race = event.target.value;  
     console.log(event.target.value);
-    
+
     if (race==="dragonborn") {
         chaScore.value=~~chaScore.value+1;
             chaScore.dispatchEvent(new Event("input"));
@@ -38,17 +43,17 @@ charRaceDropdown.addEventListener("change", function(event){
 
     if (race==="human"){
         chaScore.value=~~chaScore.value+1;
-            chaScore.dispatchEvent(new Event("input"));
+            //chaScore.dispatchEvent(new Event("input"));
         strScore.value=~~strScore.value+1;
-            strScore.dispatchEvent(new Event("input"));
+            //strScore.dispatchEvent(new Event("input"));
         dexScore.value=~~dexScore.value+1;
-            dexScore.dispatchEvent(new Event("input"));
+            //dexScore.dispatchEvent(new Event("input"));
         conScore.value=~~conScore.value+1;
-            conScore.dispatchEvent(new Event("input"));
+            //conScore.dispatchEvent(new Event("input"));
         intScore.value=~~intScore.value+1;
-            intScore.dispatchEvent(new Event("input"));
+            //intScore.dispatchEvent(new Event("input"));
         wisScore.value=~~wisScore.value+1;
-            wisScore.dispatchEvent(new Event("input"));
+            //wisScore.dispatchEvent(new Event("input"));
     }
 
     if (race==="dwarf"){
@@ -68,7 +73,14 @@ var charClass='';
 
 
 
+
 //equals corresponding Score value minus 10 then divided by 2 rounded down
+
+generate.addEventListener('click', function(){
+    alert('hello')
+})
+
+
 dexScore.addEventListener("input", function(){
     var dexMod = Math.floor((dexScore.value-10)/2);
     

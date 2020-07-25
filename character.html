@@ -45,7 +45,7 @@
 
             <div class="ch-class">
                 <strong>Character Class:</strong>
-                <input type="text" id="charClass"><br>
+                <input type="text" id="charClass" ><br>
             </div>
         </div>
        
@@ -60,7 +60,7 @@
                 |<span>Score</span>=
                     <input type="number" id="strScore">
                 |<span>Modifier</span>=
-                    <output type="number" id="strMod"></output> 
+                    <output type="number" id="strMod" class="modifier"></output> 
                 </div>
 
                 <div class="con-score">
@@ -68,7 +68,7 @@
                         |<span>Score</span>=
                             <input type="number" id="conScore">
                         |<span>Modifier</span>=
-                            <output type="number" id="conMod"></output> 
+                            <output type="number" id="conMod" class="modifier"></output> 
                 </div> 
 
                 <div class="int-score">
@@ -76,7 +76,7 @@
                     |<span>Score</span>=
                        <input type="number" id="intScore">
                     |<span>Modifier</span>=
-                        <output type="number" id="intMod"></output>
+                        <output type="number" id="intMod" class="modifier"></output>
                 </div> 
                 </div>
             </div>
@@ -86,7 +86,7 @@
                 |<span>Score</span>=
                     <input type="number" id="dexScore">
                 |<span>Modifier</span>=
-                    <output type="number" id="dexMod"></output>
+                    <output type="number" id="dexMod" class="modifier"></output>
                         
                  </div>
         
@@ -95,7 +95,7 @@
                 |<span>Score</span>=
                     <input type="number" id="wisScore">
                 |<span>Modifier</span>=
-                    <output type="number" id="wisMod"></output>
+                    <output type="number" id="wisMod" class="modifier"></output>
                 </div>
             
                 <div class="cha-score">
@@ -103,15 +103,20 @@
                 |<span>Score</span>=
                     <input type="number" id="chaScore">
                 |<span>Modifier</span>=
-                    <output type="number" id="chaMod"></output>
+                    <output type="number" id="chaMod" class="modifier"></output>
                 </div>
             </div>
         </section>
         <br>
+        
         <div class="generate">
             
-            <button role="button">Generate</button>
+            <button role="button" id="GenerateButton">Generate</button>
             
+        </div>
+
+        <div class="test" id="test">
+            This is a test
         </div>
     </body>
    
