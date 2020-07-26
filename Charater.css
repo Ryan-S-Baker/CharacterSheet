@@ -14,6 +14,19 @@ header {
     text-align: center;
     border-bottom: 1px, dimgray;
 }
+@media (max-width: 720px){
+    .main-nav {
+        background-color: tomato;
+        display: none;
+    }
+    .ch-info{
+        padding: 1em;
+        text-align: center;
+    }
+    hr{
+        display: none;
+    }
+}
 .hamburger{
     display: flex;
     flex-direction: column;
@@ -37,6 +50,9 @@ header {
 }
 .ch-info div{
     display: inline-block
+}
+.ch-info {
+    text-align: center;
 }
 .left-column {
     float:left;
