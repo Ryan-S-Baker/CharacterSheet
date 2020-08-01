@@ -72,14 +72,6 @@ var BasewisScore = document.querySelector("#BasewisScore");
 var BaseintScore = document.querySelector("#BaseintScore");
 var BasechaScore = document.querySelector("#BasechaScore");
 
-//These are the output variables to show final scores after the math
-var dexOutput = document.querySelector("#dexMod");
-var strOutput = document.querySelector("#strMod");
-var conOutput = document.querySelector("#conMod");
-var wisOutput = document.querySelector("#wisMod");
-var intOutput = document.querySelector("#intMod");
-var chaOutput = document.querySelector("#chaMod");
-
 //Character name, string value, add later: to parse the first letter capital and all following to lower
 var charName='';
 
